@@ -8,26 +8,54 @@ class SliderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 400,
-      child:CarouselSlider(
-          items: [
-            SliderImage(
-              imageName: sliderImage1,
-            ),
-            SliderImage(imageName: sliderImage2)
-          ],
-          options: CarouselOptions(
-            height: 290.0,
-            enlargeCenterPage: true,
-            autoPlay: true,
-            // aspectRatio: 16 / 9,
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enableInfiniteScroll: true,
-            autoPlayAnimationDuration: Duration(milliseconds: 200),
-            viewportFraction: 1,
-          )) ,
-    );
+    return CarouselSlider(items: [
+      Container(
+        margin: EdgeInsets.only(top:10),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(sliderImage1),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(sliderImage2),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(sliderImage3),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      Container(
+        margin: EdgeInsets.only(top: 10),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(sliderImage4),
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+    ],
+        options: CarouselOptions(
+          height: 180.0,
+          enlargeCenterPage: true,
+          autoPlay: true,
+          // aspectRatio: 16 / 9,
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enableInfiniteScroll: true,
+          autoPlayAnimationDuration: Duration(milliseconds: 200),
+          viewportFraction: 1,
+        ));
 
   }
 }
