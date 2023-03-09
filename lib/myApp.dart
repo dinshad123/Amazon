@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
             Location(),
             DrawerBorder(),
             ListButtonSection(),
+            DrawerBorder(),
             SliderSection()
           ],
         ),

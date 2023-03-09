@@ -1,20 +1,20 @@
-import 'package:amazon1/assetImage.dart';
 import 'package:flutter/material.dart';
 
 class SliderImage extends StatelessWidget {
   String imageName;
+  void Function () tap;
 
-  SliderImage({required this.imageName});
+  SliderImage({required this.imageName ,required this.tap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 290,
-      color: Colors.grey,
-      child: InkWell(
-        onTap: () {},
-        child: Ink.image(image: AssetImage(imageName),fit: BoxFit.cover,),
-      ),
-    );
+    return GestureDetector(onTap: tap,
+      child:  Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(imageName),
+             fit: BoxFit.fitHeight,
+          ),
+        )),);
   }
 }
