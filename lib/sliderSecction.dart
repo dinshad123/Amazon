@@ -57,7 +57,7 @@ class SliderSection extends StatelessWidget {
               viewportFraction: 1,
             ),
           ),
-          Positioned(top: 160, child: SliderCardSection())
+          Positioned(top: 150, child: SliderCardSection())
         ],
       ),
     );
